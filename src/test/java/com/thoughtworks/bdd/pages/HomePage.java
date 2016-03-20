@@ -25,6 +25,6 @@ public class HomePage {
     }
 
     public boolean isLoggedIn() {
-        return driver.findElement(By.xpath("//img[@class='avatar]")).isDisplayed();
+        return driver.findElement(By.xpath("//img[@class='avatar']")).isDisplayed();
     }
 }

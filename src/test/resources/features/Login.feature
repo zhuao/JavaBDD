@@ -3,7 +3,15 @@ Feature: Log in
   I should login with my username and password,
   so that I would look up my personal info.
 
-  Scenario: Fail to login when log in with wrong password
-    Given I open login page
-    When I log in with username "zhuao1051@gmail.com" and password "123456"
-    Then I should login successfully
+  Background:
+    Given I locate at login page
+
+  Scenario Outline: Fail to login when log in with wrong password
+    When I log in with invalid username "<username>" and password "<password>"
+    Then I should see same error message "Incorrect username or password."
+
+    Examples:
+      | username | password |
+      | abc@gmail.com | 123456 |
+      | abc | 2344fe |
+
