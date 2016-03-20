@@ -44,10 +44,10 @@
             <version>2.53.0</version>
             <scope>test</scope>
             <exclusions>
-                <exclusion>
-                    <groupId>org.seleniumhq.selenium</groupId>
-                    <artifactId>selenium-chrome-driver</artifactId>
-                </exclusion>
+                <!--<exclusion>-->
+                    <!--<groupId>org.seleniumhq.selenium</groupId>-->
+                    <!--<artifactId>selenium-chrome-driver</artifactId>-->
+                <!--</exclusion>-->
                 <exclusion>
                     <groupId>org.seleniumhq.selenium</groupId>
                     <artifactId>selenium-ie-driver</artifactId>
@@ -56,10 +56,10 @@
                     <groupId>org.seleniumhq.selenium</groupId>
                     <artifactId>selenium-safari-driver</artifactId>
                 </exclusion>
-                <!--<exclusion>-->
-                    <!--<groupId>org.seleniumhq.selenium</groupId>-->
-                    <!--<artifactId>selenium-firefox-driver</artifactId>-->
-                <!--</exclusion>-->
+                <exclusion>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                    <artifactId>selenium-firefox-driver</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
