@@ -1,4 +1,4 @@
-package com.thoughtworks.bdd;
+package com.thoughtworks.bdd.ft;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
