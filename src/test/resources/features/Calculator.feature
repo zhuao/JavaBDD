@@ -10,12 +10,7 @@ Feature: Calculate
 
   @smoke
   Scenario: Verify one number calculate
-    When I input expression "4"
-    Then The result is 4
-
-  @smoke
-  Scenario: Verify one number calculate
-    When I input expression "4"
+    When I input expression "(4)"
     Then The result is 4
 
   @smoke

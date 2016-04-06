@@ -11,10 +11,6 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public void navigateToNotificationPage() {
-        driver.findElement(By.xpath("//a[@href='/notifications']")).click();
-    }
-
     public void navigateToLoginPage() {
         driver.findElement(By.linkText("Sign in")).click();
     }

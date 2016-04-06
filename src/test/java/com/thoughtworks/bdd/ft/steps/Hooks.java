@@ -1,6 +1,14 @@
 package com.thoughtworks.bdd.ft.steps;
 
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class Hooks {
 
@@ -10,14 +18,15 @@ public class Hooks {
         return driver;
     }
 
-//    @Before
-//    public void beforeScenario() {
-//        driver = new FirefoxDriver();
-//        getDriver().get("https://github.com");
-//    }
-//
-//    @After
-//    public void afterScenario() {
-//        getDriver().quit();
-//    }
+    @Before("@smoke")
+    public void beforeScenario() throws Exception {
+        driver = new FirefoxDriver();
+//        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
+        getDriver().get("https://github.com");
+    }
+
+    @After("@smoke")
+    public void afterScenario() {
+        getDriver().quit();
+    }
 }
