@@ -1,4 +1,4 @@
-package com.thoughtworks.bdd;
+package com.thoughtworks.bdd.calculator;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,4 +1,4 @@
-@login
+@login @web
 Feature: Log in
   As a user,
   I should login with my username and password,

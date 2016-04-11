@@ -18,14 +18,14 @@ public class Hooks {
         return driver;
     }
 
-    @Before("@smoke")
+    @Before("@web")
     public void beforeScenario() throws Exception {
         driver = new FirefoxDriver();
 //        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
         getDriver().get("https://github.com");
     }
 
-    @After("@smoke")
+    @After("@web")
     public void afterScenario() {
         getDriver().quit();
     }
