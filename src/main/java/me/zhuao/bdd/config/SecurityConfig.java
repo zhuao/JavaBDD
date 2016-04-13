@@ -1,4 +1,4 @@
-package com.thoughtworks.bdd.config;
+package me.zhuao.bdd.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

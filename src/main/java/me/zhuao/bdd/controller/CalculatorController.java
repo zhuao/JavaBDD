@@ -1,6 +1,6 @@
-package com.thoughtworks.bdd.controller;
+package me.zhuao.bdd.controller;
 
-import com.thoughtworks.bdd.calculator.Calculator;
+import me.zhuao.bdd.calculator.Calculator;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

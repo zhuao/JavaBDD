@@ -1,4 +1,4 @@
-package com.thoughtworks.bdd.ft.pages;
+package me.zhuao.bdd.ft.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

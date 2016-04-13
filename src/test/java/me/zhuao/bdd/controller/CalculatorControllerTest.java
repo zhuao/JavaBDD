@@ -1,7 +1,7 @@
-package com.thoughtworks.bdd.controller;
+package me.zhuao.bdd.controller;
 
-import com.thoughtworks.bdd.calculator.Calculator;
-import com.thoughtworks.bdd.calculator.Expression;
+import me.zhuao.bdd.calculator.Calculator;
+import me.zhuao.bdd.calculator.Expression;
 import mockit.*;
 import org.junit.Test;
 

@@ -2,11 +2,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.thoughtworks.bdd</groupId>
-    <artifactId>cucumber-java</artifactId>
+    <groupId>me.zhuao.bdd</groupId>
+    <artifactId>BDD-java</artifactId>
     <version>${project.version}</version>
     <packaging>war</packaging>
-    <name>Cucumber-Java Demo</name>
+    <name>BDD Java demo</name>
 
     <properties>
         <project.version>0.0.1</project.version>
@@ -140,7 +140,7 @@
 
                         <configuration>
                             <excludes>
-                                <exclude>com.thoughtworks.bdd.ft.RunCukesTest</exclude>
+                                <exclude>me.zhuao.bdd.ft.RunCukesTest</exclude>
                             </excludes>
                         </configuration>
                     </execution>
@@ -152,7 +152,7 @@
                         </goals>
                         <configuration>
                             <excludes>
-                                <exclude>com.thoughtworks.bdd.CalculatorTest</exclude>
+                                <exclude>me.zhuao.bdd.CalculatorTest</exclude>
                             </excludes>
                         </configuration>
                     </execution>

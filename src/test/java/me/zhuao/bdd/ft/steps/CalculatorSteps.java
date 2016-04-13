@@ -1,7 +1,6 @@
-package com.thoughtworks.bdd.ft.steps;
+package me.zhuao.bdd.ft.steps;
 
-import com.thoughtworks.bdd.calculator.Calculator;
-import com.thoughtworks.bdd.calculator.Expression;
+import me.zhuao.bdd.calculator.Calculator;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;

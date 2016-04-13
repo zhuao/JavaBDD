@@ -1,7 +1,6 @@
-package com.thoughtworks.bdd;
+package me.zhuao.bdd;
 
-import com.thoughtworks.bdd.calculator.Calculator;
-import com.thoughtworks.bdd.calculator.Expression;
+import me.zhuao.bdd.calculator.Calculator;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;

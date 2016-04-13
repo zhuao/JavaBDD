@@ -1,7 +1,7 @@
-package com.thoughtworks.bdd.ft.steps;
+package me.zhuao.bdd.ft.steps;
 
-import com.thoughtworks.bdd.ft.pages.HomePage;
-import com.thoughtworks.bdd.ft.pages.LoginPage;
+import me.zhuao.bdd.ft.pages.HomePage;
+import me.zhuao.bdd.ft.pages.LoginPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

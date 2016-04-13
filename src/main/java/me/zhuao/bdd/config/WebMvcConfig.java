@@ -1,4 +1,4 @@
-package com.thoughtworks.bdd.config;
+package me.zhuao.bdd.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
