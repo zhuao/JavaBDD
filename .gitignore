@@ -1,6 +1,7 @@
 /.idea/
 *.iml
 /target/
+**/target/
 /lib
 .DS_Store
 .classpath

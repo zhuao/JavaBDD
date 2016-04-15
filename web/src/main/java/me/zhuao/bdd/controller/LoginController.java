@@ -23,7 +23,6 @@ public class LoginController {
             request.login(username, password);
         } catch (ServletException e) {
             LOGGER.error(e.getMessage(), e);
-            System.out.println("AoAo, login exception");
             return "error";
         }
         return "redirect:/";
