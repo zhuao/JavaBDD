@@ -41,6 +41,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.0.52-beta</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.jmockit</groupId>
             <artifactId>jmockit</artifactId>
             <version>1.22</version>
@@ -78,6 +84,12 @@
             <artifactId>cucumber-junit</artifactId>
             <version>${cucumber.version}</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>junit</artifactId>
+                    <groupId>junit</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -86,6 +98,19 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.0.52-beta</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>org.testng</groupId>-->
+            <!--<artifactId>testng</artifactId>-->
+            <!--<version>6.9.10</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -152,9 +177,13 @@
                         </goals>
 
                         <configuration>
-                            <excludes>
-                                <exclude>me.zhuao.bdd.ft.RunCukesTest</exclude>
-                            </excludes>
+                            <!--<excludes>-->
+                                <!--<exclude>me.zhuao.bdd.ft.RunCukesTest</exclude>-->
+                            <!--</excludes>-->
+
+                            <includes>
+                                <include>me.zhuao.bdd.controller.CalculatorControllerTest</include>
+                            </includes>
                         </configuration>
                     </execution>
                     <execution>
@@ -164,26 +193,26 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <excludes>
-                                <exclude>me.zhuao.bdd.CalculatorTest</exclude>
-                            </excludes>
+                            <includes>
+                                <include>me.zhuao.bdd.ft.RunCukesTest</include>
+                            </includes>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
             <!--<plugin>-->
-                <!--<groupId>org.mortbay.jetty</groupId>-->
-                <!--<artifactId>jetty-maven-plugin</artifactId>-->
-                <!--<version>8.1.16.v20140903</version>-->
-                <!--<configuration>-->
-                    <!--<connectors>-->
-                        <!--<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">-->
-                            <!--<port>9090</port>-->
-                        <!--</connector>-->
-                    <!--</connectors>-->
-                    <!--<stopKey>projectName</stopKey>-->
-                    <!--<stopPort>9091</stopPort>-->
-                <!--</configuration>-->
+            <!--<groupId>org.mortbay.jetty</groupId>-->
+            <!--<artifactId>jetty-maven-plugin</artifactId>-->
+            <!--<version>8.1.16.v20140903</version>-->
+            <!--<configuration>-->
+            <!--<connectors>-->
+            <!--<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">-->
+            <!--<port>9090</port>-->
+            <!--</connector>-->
+            <!--</connectors>-->
+            <!--<stopKey>projectName</stopKey>-->
+            <!--<stopPort>9091</stopPort>-->
+            <!--</configuration>-->
             <!--</plugin>-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>

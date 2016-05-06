@@ -21,7 +21,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void should_get_3_when_input_3_plus_1() {
+    public void should_get_right_result_when_input_two_digits_to_plus() {
         int result = new Calculator().calculate("3+1");
         assertThat(result, Is.is(4));
     }
