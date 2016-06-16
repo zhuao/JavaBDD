@@ -6,9 +6,9 @@
         <artifactId>BDD-java</artifactId>
         <version>0.0.1</version>
     </parent>
-    <artifactId>webdemo</artifactId>
+    <artifactId>web</artifactId>
     <packaging>war</packaging>
-    <name>web</name>
+    <name>Web</name>
 
     <dependencies>
 

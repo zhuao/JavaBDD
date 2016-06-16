@@ -6,7 +6,7 @@
         <artifactId>BDD-java</artifactId>
         <version>0.0.1</version>
     </parent>
-    <artifactId>webdemo</artifactId>
+    <artifactId>apitest</artifactId>
     <packaging>jar</packaging>
     <name>ApiTest</name>
 

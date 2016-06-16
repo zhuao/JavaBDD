@@ -6,9 +6,9 @@
         <artifactId>BDD-java</artifactId>
         <version>0.0.1</version>
     </parent>
-    <artifactId>webdemo</artifactId>
+    <artifactId>ft</artifactId>
     <packaging>jar</packaging>
-    <name>ft</name>
+    <name>FunctionalTest</name>
 
     <dependencies>
 
