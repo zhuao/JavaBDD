@@ -1,10 +1,10 @@
 package me.zhuao.bdd.ft.steps;
 
-import me.zhuao.bdd.ft.pages.HomePage;
-import me.zhuao.bdd.ft.pages.LoginPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import me.zhuao.bdd.ft.pages.HomePage;
+import me.zhuao.bdd.ft.pages.LoginPage;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -31,4 +31,5 @@ public class LoginSteps {
         String actualErrorMsg = new LoginPage(Hooks.getDriver()).getErrorMessage();
         assertEquals(expectedErrorMsg, actualErrorMsg);
     }
+
 }

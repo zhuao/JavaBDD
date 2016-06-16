@@ -25,6 +25,7 @@
         <module>calculator</module>
         <module>web</module>
         <module>ApiTest</module>
+        <module>FunctionalTest</module>
     </modules>
 
 
