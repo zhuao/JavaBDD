@@ -1,4 +1,4 @@
-package me.zhuao.bdd.it;
+package me.zhuao.bdd.rest;
 
 import com.jayway.restassured.RestAssured;
 import org.junit.Before;
