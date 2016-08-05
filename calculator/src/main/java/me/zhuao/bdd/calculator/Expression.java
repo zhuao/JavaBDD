@@ -8,6 +8,7 @@ public class Expression {
     private String expression;
     public static final Pattern TWO_VARIABLE_SIMPLE_EXPRESS = Pattern.compile("(([0-9]+)[\\+\\-]([0-9]+)).*");
     public static final Pattern TWO_VARIABLE_EXPRESS = Pattern.compile(".*(([0-9]+)[\\*\\/]([0-9]+)).*");
+    public static final Pattern bracket_EXPRESS = Pattern.compile(".*\\(([0-9\\*\\/\\+\\-]+)\\).*");
 
     public Expression(String expression) {
         this.expression = expression;
@@ -15,69 +16,46 @@ public class Expression {
 
     public int value() {
 
-        expression = calculateBraketRegression(expression);
+        Matcher bracketMatcher = bracket_EXPRESS.matcher(expression);
+        if (bracketMatcher.matches()) {
+            return toBracketExpression(bracketMatcher, expression).value();
+        }
 
-        expression = calculateMultiple(expression);
+        Matcher plusMatcher = TWO_VARIABLE_EXPRESS.matcher(expression);
+        if (plusMatcher.matches()) {
+            return toPlusNextExpression(plusMatcher, expression).value();
+        }
 
-        expression = calculateSUM(expression);
+        Matcher sumMatcher = TWO_VARIABLE_SIMPLE_EXPRESS.matcher(expression);
+        if (sumMatcher.matches()) {
+            return toPlusNextExpression(sumMatcher, expression).value();
+        }
 
         return Integer.valueOf(expression);
     }
 
-    private String calculateBraketRegression(String expression) {
-        int startBracketIndex = expression.indexOf('(');
-        while (startBracketIndex != -1) {
-            int depth = 0;
-            for (int charIndex = startBracketIndex + 1; charIndex < expression.length(); charIndex++) {
-                if (expression.charAt(charIndex) == '(') {
-                    depth++;
-                } else if (expression.charAt(charIndex) == ')') {
-                    if (depth == 0) {
-                        int value = new Expression(expression.substring(startBracketIndex + 1, charIndex)).value();
-                        expression = expression.substring(0, startBracketIndex) + value + expression.substring(charIndex + 1, expression.length());
-                        break;
-                    } else {
-                        depth--;
-                    }
-                }
-
-            }
-            startBracketIndex = expression.indexOf('(');
-        }
-        return expression;
+    private Expression toPlusNextExpression(Matcher plusMatcher, String expression) {
+        int  subExpressionResult = calculate(Integer.valueOf(plusMatcher.group(2)), Integer.valueOf(plusMatcher.group(3)), expression.charAt(plusMatcher.end(2)));
+        return new Expression(expression.substring(0, plusMatcher.start(2)) + subExpressionResult + expression.substring(plusMatcher.end(3), expression.length()));
     }
 
-    private String calculateMultiple(String expression) {
-        Matcher matcher = TWO_VARIABLE_EXPRESS.matcher(expression);
-        if (matcher.matches()) {
-            int subExpressionResult = 0;
-            if (expression.charAt(matcher.end(2)) == '*') {
-                subExpressionResult = Integer.valueOf(matcher.group(2)) * Integer.valueOf(matcher.group(3));
-            } else {
-                subExpressionResult = Integer.valueOf(matcher.group(2)) / Integer.valueOf(matcher.group(3));
-            }
-            String s1 = expression.substring(0, matcher.start(2)) + subExpressionResult + expression.substring(matcher.end(3), expression.length());
-            return calculateSUM(s1);
-        } else {
-            return expression;
-        }
+    private Expression toBracketExpression(Matcher bracketMatcher, String expression) {
+        int value = new Expression(bracketMatcher.group(1)).value();
+        return new Expression(expression.substring(0, bracketMatcher.start(1) - 1) + value + expression.substring(bracketMatcher.end(1) + 1, expression.length()));
     }
 
-    private String calculateSUM(String expression) {
-        Matcher matcher = TWO_VARIABLE_SIMPLE_EXPRESS.matcher(expression);
-        if (matcher.matches()) {
-            int subExpressionResult = 0;
-            if (expression.charAt(matcher.end(2)) == '+') {
-                subExpressionResult = Integer.valueOf(matcher.group(2)) + Integer.valueOf(matcher.group(3));
-            } else {
-                subExpressionResult = Integer.valueOf(matcher.group(2)) - Integer.valueOf(matcher.group(3));
-            }
-            String s1 = expression.substring(0, matcher.start(2)) + subExpressionResult + expression.substring(matcher.end(3), expression.length());
-            return calculateSUM(s1);
-        } else {
-            return expression;
+    private int calculate(Integer firstValue, Integer secondValue, char operator) {
+        int subExpressionResult = 0;
+        if (operator == '+') {
+            subExpressionResult = firstValue + secondValue;
+        } else if (operator == '-') {
+            subExpressionResult = firstValue - secondValue;
+        } else if (operator == '*') {
+            subExpressionResult = firstValue * secondValue;
+        } else if (operator == '/') {
+            subExpressionResult = firstValue / secondValue;
         }
-
+        return subExpressionResult;
     }
 
 }
