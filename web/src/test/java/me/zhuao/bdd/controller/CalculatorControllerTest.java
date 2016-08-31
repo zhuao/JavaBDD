@@ -1,43 +1,26 @@
 package me.zhuao.bdd.controller;
 
-import me.zhuao.bdd.calculator.Calculator;
-import me.zhuao.bdd.calculator.Expression;
-import mockit.*;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest
 public class CalculatorControllerTest {
 
-    @Tested
+    @Autowired
     private CalculatorController calculatorController;
 
 
     @Test
-    public void should_calculate_float_when_calculator_do_not_support_yet(@Injectable final Calculator calculator) {
-        new Expectations() {{
-            calculator.calculate(anyString); result = 3;
-        }};
-
-        assertThat(calculatorController.calculate("1.5*2"), is(3));
+    public void should_calculate_float_when_calculator_do_not_support_yet() {
+        assertThat(calculatorController.calculate("1+1"), is(2));
+//        assertThat(calculatorController.calculate("1.5*2"), is(3));
     }
 
-    @Test
-    public void should_check_mock_method(@Injectable final Calculator calculator) {
-
-        new MockUp<Expression>() {
-
-            @Mock
-            public int value() {
-                return 2;
-            }
-        };
-
-        new Expectations() {{
-            calculator.calculate(anyString); result = new Expression("").value();
-        }};
-
-        assertThat(calculatorController.calculate("2+3"), is(2));
-    }
 }
