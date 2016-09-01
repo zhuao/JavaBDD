@@ -1,4 +1,4 @@
-package io.pivotal.microservices.accounts;
+package io.pivotal.microservices.repository;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -25,8 +25,8 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
  */
 @Configuration
 @ComponentScan("io.pivotal.microservices")
-@EntityScan("io.pivotal.microservices.accounts")
-@EnableJpaRepositories("io.pivotal.microservices.accounts")
+@EntityScan("io.pivotal.microservices.domain")
+@EnableJpaRepositories("io.pivotal.microservices.repository")
 @PropertySource("classpath:db-config.properties")
 public class AccountsConfiguration {
 

@@ -3,8 +3,8 @@ package io.pivotal.microservices.controller;
 import java.util.List;
 import java.util.logging.Logger;
 
-import io.pivotal.microservices.accounts.Account;
-import io.pivotal.microservices.accounts.AccountRepository;
+import io.pivotal.microservices.domain.Account;
+import io.pivotal.microservices.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

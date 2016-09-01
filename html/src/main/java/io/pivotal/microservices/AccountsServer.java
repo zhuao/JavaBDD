@@ -1,7 +1,7 @@
 package io.pivotal.microservices;
 
-import io.pivotal.microservices.accounts.AccountRepository;
-import io.pivotal.microservices.accounts.AccountsConfiguration;
+import io.pivotal.microservices.repository.AccountRepository;
+import io.pivotal.microservices.repository.AccountsConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

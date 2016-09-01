@@ -1,7 +1,8 @@
-package io.pivotal.microservices.accounts;
+package io.pivotal.microservices.repository;
 
 import java.util.List;
 
+import io.pivotal.microservices.domain.Account;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 

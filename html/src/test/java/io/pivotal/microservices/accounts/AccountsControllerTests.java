@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.pivotal.microservices.controller.AccountsController;
+import io.pivotal.microservices.domain.Account;
+import io.pivotal.microservices.repository.AccountRepository;
 import org.junit.Before;
 
 public class AccountsControllerTests extends AbstractAccountControllerTests {
