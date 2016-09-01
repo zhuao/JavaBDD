@@ -17,6 +17,13 @@
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>me.zhuao.bdd</groupId>
+			<artifactId>caculator</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
 		<dependency>
 			<!-- Setup Spring Boot -->
 			<groupId>org.springframework.boot</groupId>
