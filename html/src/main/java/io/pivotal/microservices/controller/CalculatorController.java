@@ -23,13 +23,13 @@ public class CalculatorController {
 
     @RequestMapping("/calculate")
     public int calculate(@RequestParam String expression) {
-        int calculate = calculator.calculate(expression);
-//        historyRepository.save(expression, calculate);
-        return calculate;
+        int result = calculator.calculate(expression);
+        historyRepository.save(new History(expression, String.valueOf(result)));
+        return result;
     }
 
     @RequestMapping("/history")
-    public List<History> history(@RequestParam String expression) {
+    public List<History> history() {
         return historyRepository.findAll();
     }
 

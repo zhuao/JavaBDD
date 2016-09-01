@@ -6,7 +6,7 @@ import org.springframework.data.repository.Repository;
 import java.util.List;
 
 public interface HistoryRepository extends Repository<History, Long> {
-//    public void save(String expression, int result);
+    public void save(History history);
 
     public List<History> findAll();
 }
