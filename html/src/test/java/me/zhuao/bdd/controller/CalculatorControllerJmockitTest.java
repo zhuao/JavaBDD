@@ -1,13 +1,16 @@
 package me.zhuao.bdd.controller;
 
+import io.pivotal.microservices.controller.CalculatorController;
 import me.zhuao.bdd.calculator.Calculator;
 import me.zhuao.bdd.calculator.Expression;
 import mockit.*;
+import org.hamcrest.MatcherAssert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
 
+@Ignore
 public class CalculatorControllerJmockitTest {
 
     @Tested
@@ -20,7 +23,7 @@ public class CalculatorControllerJmockitTest {
             calculator.calculate(anyString); result = 3;
         }};
 
-        assertThat(calculatorController.calculate("1.5*2"), is(3));
+        MatcherAssert.assertThat(calculatorController.calculate("1.5*2"), is(3));
     }
 
     @Test
@@ -38,6 +41,6 @@ public class CalculatorControllerJmockitTest {
             calculator.calculate(anyString); result = new Expression("").value();
         }};
 
-        assertThat(calculatorController.calculate("2+3"), is(2));
+        MatcherAssert.assertThat(calculatorController.calculate("2+3"), is(2));
     }
 }
