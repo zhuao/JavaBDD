@@ -3,6 +3,7 @@ package io.pivotal.microservices.accounts;
 import java.util.List;
 import java.util.logging.Logger;
 
+import io.pivotal.microservices.controller.AccountsController;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

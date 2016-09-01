@@ -24,7 +24,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
  * @author Paul Chapman
  */
 @Configuration
-@ComponentScan
+@ComponentScan("io.pivotal.microservices")
 @EntityScan("io.pivotal.microservices.accounts")
 @EnableJpaRepositories("io.pivotal.microservices.accounts")
 @PropertySource("classpath:db-config.properties")
