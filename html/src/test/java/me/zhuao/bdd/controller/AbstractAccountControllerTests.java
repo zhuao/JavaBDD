@@ -1,15 +1,15 @@
-package io.pivotal.microservices.accounts;
+package me.zhuao.bdd.controller;
 
 import java.util.List;
 import java.util.logging.Logger;
 
-import io.pivotal.microservices.controller.AccountsController;
-import io.pivotal.microservices.domain.Account;
+import me.zhuao.bdd.controller.AccountsController;
+import me.zhuao.bdd.domain.Account;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import io.pivotal.microservices.exceptions.AccountNotFoundException;
+import me.zhuao.bdd.exceptions.AccountNotFoundException;
 
 public abstract class AbstractAccountControllerTests {
 

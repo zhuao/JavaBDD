@@ -1,16 +1,16 @@
-package io.pivotal.microservices.controller;
+package me.zhuao.bdd.controller;
 
 import java.util.List;
 import java.util.logging.Logger;
 
-import io.pivotal.microservices.domain.Account;
-import io.pivotal.microservices.repository.AccountRepository;
+import me.zhuao.bdd.domain.Account;
+import me.zhuao.bdd.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.pivotal.microservices.exceptions.AccountNotFoundException;
+import me.zhuao.bdd.exceptions.AccountNotFoundException;
 
 /**
  * A RESTFul controller for accessing account information.

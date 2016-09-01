@@ -1,4 +1,4 @@
-package io.pivotal.microservices.domain;
+package me.zhuao.bdd.domain;
 
 
 import javax.persistence.Entity;

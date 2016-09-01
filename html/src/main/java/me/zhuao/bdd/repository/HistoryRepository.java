@@ -1,6 +1,6 @@
-package io.pivotal.microservices.repository;
+package me.zhuao.bdd.repository;
 
-import io.pivotal.microservices.domain.History;
+import me.zhuao.bdd.domain.History;
 import org.springframework.data.repository.Repository;
 
 import java.util.List;

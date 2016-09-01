@@ -1,4 +1,4 @@
-package io.pivotal.microservices.controller;
+package me.zhuao.bdd.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

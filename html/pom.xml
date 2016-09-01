@@ -12,7 +12,7 @@
 
 	<properties>
 		<!-- Stand-alone RESTFul application for testing only -->
-		<start-class>io.pivotal.microservices.AccountsServer</start-class>
+		<start-class>me.zhuao.bdd.AccountsServer</start-class>
 		<spring-self.version>1.3.5.RELEASE</spring-self.version>
 	</properties>
 

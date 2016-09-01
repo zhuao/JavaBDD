@@ -1,8 +1,8 @@
-package io.pivotal.microservices.repository;
+package me.zhuao.bdd.repository;
 
 import java.util.List;
 
-import io.pivotal.microservices.domain.Account;
+import me.zhuao.bdd.domain.Account;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 

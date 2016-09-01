@@ -1,7 +1,7 @@
-package io.pivotal.microservices;
+package me.zhuao.bdd;
 
-import io.pivotal.microservices.repository.AccountRepository;
-import io.pivotal.microservices.repository.AccountsConfiguration;
+import me.zhuao.bdd.repository.AccountRepository;
+import me.zhuao.bdd.repository.AccountsConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

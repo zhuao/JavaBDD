@@ -1,7 +1,7 @@
-package io.pivotal.microservices.controller;
+package me.zhuao.bdd.controller;
 
-import io.pivotal.microservices.domain.History;
-import io.pivotal.microservices.repository.HistoryRepository;
+import me.zhuao.bdd.domain.History;
+import me.zhuao.bdd.repository.HistoryRepository;
 import me.zhuao.bdd.calculator.Calculator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
