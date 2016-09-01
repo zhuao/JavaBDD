@@ -9,16 +9,7 @@ import org.springframework.context.annotation.Import;
 
 import java.util.logging.Logger;
 
-/**
- * Run as a micro-service, registering with the Discovery Server (Eureka).
- * <p>
- * Note that the configuration for this application is imported from
- * {@link AccountsConfiguration}. This is a deliberate separation of concerns.
- * 
- * @author Paul Chapman
- */
 @EnableAutoConfiguration
-//@EnableDiscoveryClient
 @Import(AccountsConfiguration.class)
 public class AccountsServer {
 

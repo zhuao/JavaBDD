@@ -15,7 +15,6 @@ public class AccountsControllerTests extends AbstractAccountControllerTests {
 
 	protected static class TestAccountRepository implements AccountRepository {
 
-		@Override
 		public Account findByNumber(String accountNumber) {
 			if (accountNumber.equals(ACCOUNT_1))
 				return theAccount;
@@ -23,7 +22,6 @@ public class AccountsControllerTests extends AbstractAccountControllerTests {
 				return null;
 		}
 
-		@Override
 		public List<Account> findByOwnerContainingIgnoreCase(String partialName) {
 			List<Account> accounts = new ArrayList<Account>();
 
@@ -33,7 +31,6 @@ public class AccountsControllerTests extends AbstractAccountControllerTests {
 			return accounts;
 		}
 
-		@Override
 		public int countAccounts() {
 			return 1;
 		}
